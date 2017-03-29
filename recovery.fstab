@@ -1,0 +1,65 @@
+# mmcblk0p1 (proinfo)
+/proinfo     emmc      /dev/block/platform/mtk-msdc.0/by-name/proinfo         flags=display="proinfo";backup=1
+# mmcblk0p2 (nvram)
+/nvram       emmc      /dev/block/platform/mtk-msdc.0/by-name/nvram           flags=display="nvram";backup=1
+# mmcblk0p3 (protect1)
+/protect_f   ext4      /dev/block/platform/mtk-msdc.0/by-name/protect1        flags=display="protect1";backup=1
+# mmcblk0p4 (protect2)
+/protect_s   ext4      /dev/block/platform/mtk-msdc.0/by-name/protect2        flags=display="protect2";backup=1
+# mmcblk0p5 (lk)
+/lk          emmc      /dev/block/platform/mtk-msdc.0/by-name/lk              flags=display="lk";backup=1
+# mmcblk0p6 (para)
+/para        emmc      /dev/block/platform/mtk-msdc.0/by-name/para            flags=display="para";backup=1
+# mmcblk0p7 (boot)
+/boot        emmc      /dev/block/platform/mtk-msdc.0/by-name/boot            flags=display="boot";backup=1
+# mmcblk0p8 (recovery)
+/recovery    emmc      /dev/block/platform/mtk-msdc.0/by-name/recovery        flags=display="recovery";backup=1
+# mmcblk0p9 (logo)
+/logo        emmc      /dev/block/platform/mtk-msdc.0/by-name/logo            flags=display="logo";backup=1
+# mmcblk0p10 (expdb)
+/expdb       emmc      /dev/block/platform/mtk-msdc.0/by-name/expdb           flags=display="expdb";backup=1
+# mmcblk0p11 (seccfg)
+/seccfg      emmc      /dev/block/platform/mtk-msdc.0/by-name/seccfg          flags=display="seccfg";backup=1
+# mmcblk0p12 (oemkeystore)
+/oemkeystore emmc      /dev/block/platform/mtk-msdc.0/by-name/oemkeystore     flags=display="oemkeystore";backup=1
+# mmcblk0p13 (secro)
+/secro       emmc      /dev/block/platform/mtk-msdc.0/by-name/secro           flags=display="secro";backup=1
+# mmcblk0p14 (keystore)
+/keystore    emmc      /dev/block/platform/mtk-msdc.0/by-name/keystore        flags=display="keystore";backup=1
+# mmcblk0p15 (tee1)
+/tee1        emmc      /dev/block/platform/mtk-msdc.0/by-name/tee1            flags=display="tee1";backup=1
+# mmcblk0p16 (tee2)
+/tee2        emmc      /dev/block/platform/mtk-msdc.0/by-name/tee2            flags=display="tee2";backup=1
+# mmcblk0p17 (frp)
+/persistent  emmc      /dev/block/platform/mtk-msdc.0/by-name/frp             flags=display="frp";backup=1
+# mmcblk0p18 (nvdata)
+/nvdata      ext4      /dev/block/platform/mtk-msdc.0/by-name/nvdata          flags=display="nvdata";backup=1;wipeingui;wipeduringfactoryreset
+# mmcblk0p19 (metadata)
+/metadata    emmc      /dev/block/platform/mtk-msdc.0/by-name/metadata        flags=display="metadata";backup=1
+# mmcblk0p20 (system)
+/system      ext4      /dev/block/platform/mtk-msdc.0/by-name/system          flags=display="system";backup=1;mounttodecrypt
+# mmcblk0p21 (cache)
+/cache       ext4      /dev/block/platform/mtk-msdc.0/by-name/cache           flags=display="cache";backup=1;wipeingui;wipeduringfactoryreset
+# mmcblk0p22 (userdata)
+/data        ext4      /dev/block/platform/mtk-msdc.0/by-name/userdata        flags=display="data";backup=1;wipeingui;wipeduringfactoryreset;encryptable=/dev/block/platform/mtk-msdc.0/by-name/metadata
+# mmcblk0p23 (flashinfo)
+/flashinfo   emmc      /dev/block/platform/mtk-msdc.0/by-name/flashinfo       flags=display="flashinfo";backup=1
+
+
+#
+#/mmcblk0rpmb   emmc      /dev/block/mmcblk0rpmb                              flags=display="mmcblk0rpmb";backup=1
+#/mmcblk0boot1  emmc      /dev/block/mmcblk0boot1                             flags=display="mmcblk0boot1";backup=1
+#/mmcblk0boot0  emmc      /dev/block/mmcblk0boot0                             flags=display="mmcblk0boot0";backup=1
+
+# External
+/sdcard1        auto      /dev/block/mmcblk1p1                                flags=display="MicroSD";storage;wipeingui;removable
+/usb-otg        auto      /dev/block/sda1                                     flags=display="USBOTG";storage;wipeingui;removable
+
+# Full partition images
+/protect1_image emmc      /dev/block/platform/mtk-msdc.0/by-name/protect1     flags=display="protect1-image";backup=1
+/protect2_image emmc      /dev/block/platform/mtk-msdc.0/by-name/protect2     flags=display="protect1-image";backup=1
+/system_image	emmc	  /dev/block/platform/mtk-msdc.0/by-name/system       flags=display="system-image";backup=1
+/nvdata_image   emmc      /dev/block/platform/mtk-msdc.0/by-name/nvdata       flags=display="nvdata-image";backup=1
+/cache_image    emmc      /dev/block/platform/mtk-msdc.0/by-name/cache        flags=display="cache-image";backup=1
+/data_image     emmc      /dev/block/platform/mtk-msdc.0/by-name/userdata     flags=display="data-image";backup=1
+/full_flash     emmc      /dev/block/mmcblk0                                  flags=display="full-flash-image";backup=1
